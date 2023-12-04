@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "wikipedia-game-image-search"
+version = "0.1.0"
+description = ""
+authors = ["ricklon <rianders@docs.rutgers.edu>"]
+readme = "README.md"
+packages = [{include = "wikipedia_game_image_search"}]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.9.7 || >3.9.7,<4.0"
+wikipedia-api = "^0.6.0"
+streamlit = "^1.29.0"
+requests = "^2.31.0"
+
+[tool.poetry.group.dev.dependencies]
+watchdog = "^3.0.0"
+
+[tool.taskipy.tasks]
+run_streamlit = "streamlit run app.py"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
